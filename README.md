@@ -2,6 +2,8 @@
 
 A simple web application to manage your daily tasks. With "To Do It," you can easily add tasks, mark them as completed, remove tasks individually, and even clear the entire list.
 
+You can access it by visiting https://rafajdev.github.io/ToDoIt/.
+
 ## Features
 
 - **Add tasks**: Enter new tasks in your to-do list.
