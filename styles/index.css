@@ -1,0 +1,175 @@
+:root {
+   --color-background: #dde8ef;
+   --color-primary: #42a5f5;
+   --color-primary-dark: #1e88e5;
+   --color-secondary: #e53935;
+   --color-secondary-dark: #b32727;
+   --color-task-border: #ccc;
+   --color-task-background: white;
+   --color-text: #333;
+   --color-placeholder: #888;
+   --border-radius: 8px;
+   --padding: 10px;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-family: 'Inter', sans-serif;
+   background-color: var(--color-background);
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: center;
+   padding: var(--padding);
+}
+
+form {
+   display: flex;
+   flex-wrap: nowrap;
+   gap: var(--padding);
+   margin-bottom: 20px;
+   width: 100%;
+   max-width: 600px;
+}
+
+input {
+   flex: 1;
+   padding: var(--padding);
+   border: 2px solid var(--color-task-border);
+   border-radius: var(--border-radius);
+   font-size: 16px;
+   color: var(--color-text);
+   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder {
+   color: var(--color-placeholder);
+}
+
+input:focus {
+   border-color: var(--color-primary);
+   box-shadow: 0 0 5px rgba(66, 165, 245, 0.5);
+   outline: none;
+}
+
+button {
+   padding: var(--padding);
+   border: none;
+   border-radius: var(--border-radius);
+   cursor: pointer;
+   font-size: 16px;
+   color: white;
+   background-color: var(--color-primary);
+   transition: background-color 0.3s ease;
+   flex: 0 0 auto;
+   min-width: 100px;
+}
+
+button:hover {
+   background-color: var(--color-primary-dark);
+}
+
+#erase-list {
+   background-color: var(--color-secondary);
+}
+
+#erase-list:hover {
+   background-color: var(--color-secondary-dark);
+}
+
+.list {
+   width: 100%;
+   max-width: 600px;
+}
+
+ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+li {
+   background-color: var(--color-task-background);
+   border: 1px solid var(--color-task-border);
+   border-radius: var(--border-radius);
+   padding: var(--padding);
+   width: 80%;
+   height: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: var(--color-text);
+}
+
+li:hover {
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: var(--padding);
+   gap: 10px;
+   border: 1px solid var(--color-task-border);
+   border-radius: var(--border-radius);
+   background-color: var(--color-task-background);
+   margin: 5px 0;
+   transition: box-shadow 0.3s ease;
+}
+
+.task-container:hover {
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox {
+   width: 24px;
+   height: 24px;
+   cursor: pointer;
+}
+
+.button-delete-task {
+   padding: 5px 10px;
+   height: 40px;
+   border: none;
+   border-radius: var(--border-radius);
+   cursor: pointer;
+   background-color: var(--color-secondary);
+   color: white;
+   transition: background-color 0.3s ease;
+}
+
+.button-delete-task:hover {
+   background-color: var(--color-secondary-dark);
+}
+
+@media (max-width: 600px) {
+   form {
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   button {
+      flex: 1;
+   }
+
+   li {
+      width: 100%;
+      height: auto;
+   }
+
+   .task-container {
+      justify-content: space-between;
+   }
+}
